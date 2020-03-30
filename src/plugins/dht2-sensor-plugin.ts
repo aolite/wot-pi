@@ -1,6 +1,5 @@
 import { Logger } from '@nestjs/common';
 import * as sensorDriver from 'node-dht-sensor';
-//import resourcesJson from '../resources/resources.json'; 
 import {proxyResource} from '../resources/model';
 
 export class Dht2SensorPlugin {

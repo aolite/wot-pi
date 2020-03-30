@@ -15,11 +15,7 @@ export class EventsGateway /*implements OnGatewayConnection, OnGatewayDisconnect
   handleConnection(client: any, ...args: any[]) {
     this.logger.log(`New Connection:${args [0]}`);
     //this.logger.log(inspect(client))
-    this.logger.log(inspect(args[0].url))
     const url = args[0].url;
-    this.logger.log(inspect(url));
-
-    client.send('Listening data...');
 
     myEvent.on('ws-wot', ()=>{
       this.logger.log('Event acquired');
@@ -39,7 +35,6 @@ export class EventsGateway /*implements OnGatewayConnection, OnGatewayDisconnect
     for (let i = 0; i < parts.length; i++) {
       result = result[parts[i]];
     }
-    this.logger.log(result);
     return result;
   }
 }

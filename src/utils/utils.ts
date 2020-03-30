@@ -6,7 +6,8 @@ const addDevice = (id, name, description, sensors= {}, actuators = {}) => {
     }
 
     resourcesJson['things'][id] = {
-        'name': description, 
+        'name': name, 
+        'description': description,
         'sensors': sensors,
         'actuators': actuators
     }

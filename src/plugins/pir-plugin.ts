@@ -1,5 +1,4 @@
 import { Logger } from '@nestjs/common';
-import resourcesJson from '../resources/resources.json'; 
 import * as onoff from 'onoff';
 import { exit } from 'process';
 
