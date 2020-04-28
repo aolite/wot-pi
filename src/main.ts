@@ -24,9 +24,9 @@ async function bootstrap() {
   coapServer.start();
 
 
-  pirPlugin.start({'simulate': true, 'frequency': 2000});
+  //pirPlugin.start({'simulate': true, 'frequency': 2000});
   dhtPlugin.start({'simulate': true, 'frequency': 10000});
-  ledPlugin.start({'simulate': true});
-  coapPlugin.start({'simulate': false, 'frequency': 1000});
+  //ledPlugin.start({'simulate': true});
+  //coapPlugin.start({'simulate': false, 'frequency': 1000});
 }
 bootstrap();

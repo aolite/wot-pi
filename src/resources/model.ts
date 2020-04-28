@@ -1,5 +1,6 @@
 
-import resourcesJson from '../resources/resources.json'; 
+import resourcesJson from '../resources/resources.json';
+import piNoLD from '../resources/piNoLD.json';
 import {EventEmitter} from 'events';
 
 const myEvent = new EventEmitter();
@@ -15,5 +16,6 @@ const proxyResource = new Proxy(resourcesJson, {
 
 export  {
     proxyResource,
-    myEvent
+    myEvent,
+    piNoLD
 };
