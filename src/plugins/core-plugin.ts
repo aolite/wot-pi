@@ -10,8 +10,8 @@ export class CorePlugin {
 
     constructor (params: object, propertyId: string, doStop: any,
                  doSimulate: any, actionsIds: any, doAction: any){
-        if(params) this.params = params
-        else this.params = {'simulate': false, 'frequency': 5000}
+        if(params) this.params = params;
+        else this.params = {'simulate': false, 'frequency': 5000};
 
         this.doAction = doAction;
         this.doStop = doStop;
