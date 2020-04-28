@@ -39,9 +39,15 @@ const modelToResources = (subModel, withValue) => {
     return resources;
 };
 
+const isoTimestamp = () => {
+    const date = new Date();
+    return date.toISOString();
+};
+
 export {
     addDevice, 
     randomInt,
     extractFields,
-    modelToResources
+    modelToResources,
+    isoTimestamp
 };
