@@ -1,11 +1,12 @@
-import resourcesJson from '../resources/resources.json'; 
+//import resourcesJson from '../resources/resources.json';
+import piNoLD from '../resources/piNoLD.json';
 
 const addDevice = (id, name, description, sensors= {}, actuators = {}) => {
-    if (!resourcesJson.hasOwnProperty('things')){
-        resourcesJson['things'] = {};
+    if (!piNoLD.hasOwnProperty('things')){
+        piNoLD['things'] = {};
     }
 
-    resourcesJson['things'][id] = {
+    piNoLD['things'][id] = {
         'name': name, 
         'description': description,
         'sensors': sensors,
@@ -44,10 +45,15 @@ const isoTimestamp = () => {
     return date.toISOString();
 };
 
+const findProperty = (propertyId: string) => {
+    return piNoLD.links.properties.resources[propertyId];
+};
+
 export {
     addDevice, 
     randomInt,
     extractFields,
     modelToResources,
-    isoTimestamp
+    isoTimestamp,
+    findProperty
 };

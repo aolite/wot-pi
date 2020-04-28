@@ -4,19 +4,23 @@ import { AppService } from './app.service';
 
 describe('AppController', () => {
   let appController: AppController;
+  let appService: AppService;
 
   beforeEach(async () => {
-    const app: TestingModule = await Test.createTestingModule({
+    const moduleRef: TestingModule = await Test.createTestingModule({
       controllers: [AppController],
       providers: [AppService],
     }).compile();
 
-    appController = app.get<AppController>(AppController);
+    appService = moduleRef.get<AppService>(AppService);
+    appController = moduleRef.get<AppController>(AppController);
   });
 
   describe('root', () => {
-    it('should return "Hello World!"', () => {
-      expect(appController.getHello()).toBe('Hello World!');
+    it('should return a specific object describing the PI model', async () => {
+      const result = {};
+      jest.spyOn( appService, 'getModel').mockImplementation(() => result);
+      expect(await appController.getModel().toPromise()).toBe(result);
     });
   });
 });
