@@ -29,7 +29,7 @@
     "bl": "^4.0.2",
     "coap": "^0.23.1",
     "coap-cli": "^0.7.1",
-    "msgpack5": "^4.2.1",
+    "msgpack5": "^4.5.1",
     "node-json2html": "^1.4.0",
     "node-uuid": "^1.4.8",
     "reflect-metadata": "^0.1.13",
